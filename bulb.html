@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <button class="btn">click me</button>
+    <script>
+      let bulb = document.querySelector("div");
+      let btn = document.querySelector(".btn");
+      let state = 0;
+      btn.addEventListener("click", function () {
+        if (state == 0) {
+          bulb.style.backgroundColor = "orange";
+          state += 1;
+        } else {
+          bulb.style.backgroundColor = "black";
+          state -= 1;
+        }
+      });
+    </script>
+  </body>
+  <style>
+    div {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background-color: black;
+      position: relative;
+      left: 40%;
+    }
+    div:hover {
+      background-color: yellow;
+    }
+    .btn {
+      padding: 20px;
+      background-color: aquamarine;
+      position: absolute;
+      left: 50%;
+      top: 40%;
+    }
+  </style>
+</html>
